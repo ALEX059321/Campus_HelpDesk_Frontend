@@ -82,7 +82,7 @@ const Hero = () => {
      <Link to = "/Create_Ticket"> 
       <div className="flex flex-col items-center text-center p-10 bg-[#f4f0e6] border-b border-black transition-all hover:bg-[#ece7da]">
         <div className="mb-6 h-40 w-70 flex items-center justify-center">
-          <img src="src/assets/image_1.png" alt="Product guides" className="h-full object-contain" />
+          <img src="./public/assets/image_1.png" alt="Product guides" className="h-full object-contain" />
         </div>
         <h3 className="font-serif text-3xl text-gray-900 mb-4">
           Raise Ticket
@@ -97,7 +97,7 @@ const Hero = () => {
     <div className="flex flex-wrap justify-center gap-20" >
     <Link to = "/MyTickets">       <div className="flex flex-col items-center text-center p-10 bg-[#f4f0e6] border-b border-black transition-all hover:bg-[#ece7da]">
         <div className="mb-6 h-40 w-70 flex items-center justify-center">
-          <img src="src/assets/image_2.png" alt="Product guides" className="h-full object-contain" />
+          <img src="./public/assets/image_2.png" alt="Product guides" className="h-full object-contain" />
         </div>
         <h3 className="font-serif text-3xl text-gray-900 mb-4">
           My Tickets
@@ -115,7 +115,7 @@ const Hero = () => {
     <Link to = "/Knowledge">
       <div className="flex flex-col items-center text-center p-10 bg-[#f4f0e6] border-b border-black transition-all hover:bg-[#ece7da]">
         <div className="mb-6 h-40 w-70 flex items-center justify-center">
-          <img src="src/assets/image_5.png" alt="Product guides" className="h-full object-contain" />
+          <img src="./public/assets/image_5.png" alt="Product guides" className="h-full object-contain" />
         </div>
         <h3 className="font-serif text-3xl text-gray-900 mb-4">
           Self-Service
@@ -132,7 +132,7 @@ const Hero = () => {
       <Link to="/SuggestionForm">
         <div className="flex flex-col items-center text-center p-10 bg-[#f4f0e6] border-b border-black transition-all hover:bg-[#ece7da] min-h-[380px]">
           <div className="mb-6 h-40 w-70 flex items-center justify-center">
-            <img src="src/assets/image_6.png" alt="Product guides" className="h-full object-contain" />
+            <img src="./public/assets/image_6.png" alt="Product guides" className="h-full object-contain" />
           </div>
           <h3 className="font-serif text-3xl text-gray-900 mb-4">
             suggestions
@@ -149,7 +149,7 @@ const Hero = () => {
       <Link to="/ContactSupport">
         <div className="flex flex-col items-center text-center p-10 bg-[#f4f0e6] border-b border-black transition-all hover:bg-[#ece7da] min-h-[380px]">
           <div className="mb-6 h-40 w-70 flex items-center justify-center">
-            <img src="src/assets/image_3.png" alt="Product guides" className="h-full object-contain" />
+            <img src="./public/assets/image_3.png" alt="Product guides" className="h-full object-contain" />
           </div>
           <h3 className="font-serif text-3xl text-gray-900 mb-4">
             contact Support
@@ -165,7 +165,7 @@ const Hero = () => {
      
       <div className="flex flex-col items-center text-center p-10 mr-[140px] bg-[#f4f0e6] border-b border-black transition-all hover:bg-[#ece7da]">
         <div className="mb-6 h-40 w-70 flex items-center justify-center">
-          <img src="src/assets/image_7.png" alt="Product guides" className="h-full object-contain" />
+          <img src="./public/assets/image_7.png" alt="Product guides" className="h-full object-contain" />
         </div>
         <h3 className="font-serif text-3xl text-gray-900 mb-4">
           Anti-Ragging Cell
