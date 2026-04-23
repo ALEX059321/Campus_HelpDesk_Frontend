@@ -55,7 +55,7 @@ const AdminLogin = () => {
       <div className="flex h-[700px] w-full">
         <div className="w-full hidden md:inline-block bg-slate-900 relative">
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-slate-900 to-black opacity-90 mix-blend-multiply"></div>
-          <img className="h-full w-[650px] ml-[350px] object-cover opacity-60" src="./public/assets/Sign_in.png" alt="Admin Portal" />
+          <img className="h-full w-[650px] ml-[350px] object-cover opacity-60" src="/assets/Sign_in.png" alt="Admin Portal" />
           <div className="absolute top-1/2 left-[500px] transform -translate-y-1/2 text-white">
             <h1 className="text-5xl font-black tracking-wider mb-4">ADMIN PORTAL</h1>
             <p className="text-xl font-medium text-slate-300">Authorized Personnel Only</p>
