@@ -66,7 +66,7 @@ const Create_acc = () => {
         <div className="w-full hidden md:inline-block">
           <img 
             className="h-full w-[750px] ml-[300px]" 
-            src="src/assets/image_8.png" 
+            src="/assets/image_8.png" 
             alt="leftSideImage" 
           />
         </div>

@@ -76,7 +76,7 @@ const Sign_in = () => {
       <div className="flex h-[700px] w-full">
         <div className="w-full hidden md:inline-block">
         
-          <img className="h-full w-[650px] ml-[350px]" src="/src/assets/Sign_in.png" alt="leftSideImage" />
+          <img className="h-full w-[650px] ml-[350px]" src="/assets/Sign_in.png" alt="leftSideImage" />
         </div>
 
         <div className="w-full flex flex-col items-center justify-center relative">
