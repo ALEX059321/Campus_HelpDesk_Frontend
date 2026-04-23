@@ -18,7 +18,7 @@ const Forget_Pass = () => {
     
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:1200/api/v1/auth/forgot-password', { email });
+      const res = await axios.post('https://campus-help-desk-backend-rvws.vercel.app/api/v1/auth/forgot-password', { email });
       if (res.data.success) {
         toast.success(res.data.message || "OTP sent successfully!");
         setStep(2);
@@ -36,7 +36,7 @@ const Forget_Pass = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:1200/api/v1/auth/verify-otp', { email, otp });
+      const res = await axios.post('https://campus-help-desk-backend-rvws.vercel.app/api/v1/auth/verify-otp', { email, otp });
       if (res.data.success) {
         toast.success("OTP verified!");
         setStep(3);
@@ -55,7 +55,7 @@ const Forget_Pass = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:1200/api/v1/auth/reset-password', { email, otp, newPassword });
+      const res = await axios.post('https://campus-help-desk-backend-rvws.vercel.app/api/v1/auth/reset-password', { email, otp, newPassword });
       if (res.data.success) {
         toast.success("Password reset successfully! Redirecting...");
         setTimeout(() => navigate('/Sign_in'), 2000);

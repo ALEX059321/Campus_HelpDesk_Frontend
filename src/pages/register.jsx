@@ -17,7 +17,7 @@ const Create_acc = () => {
 
    
     toast.promise(
-        axios.post('http://localhost:1200/api/v1/auth/register', data),
+        axios.post('https://campus-help-desk-backend-rvws.vercel.app/api/v1/auth/register', data),
         {
             loading: 'Creating your account...', 
             success: (res) => {

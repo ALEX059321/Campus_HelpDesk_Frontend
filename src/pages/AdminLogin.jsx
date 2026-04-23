@@ -17,7 +17,7 @@ const AdminLogin = () => {
     const data = { email, password };
 
     toast.promise(
-      axios.post('http://localhost:1200/api/v1/auth/admin/login', data),
+      axios.post('https://campus-help-desk-backend-rvws.vercel.app/api/v1/auth/admin/login', data),
       {
         loading: 'Authenticating administrator credentials...',
         success: (res) => {

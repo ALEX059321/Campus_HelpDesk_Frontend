@@ -22,7 +22,7 @@ const MyTickets = () => {
       const token = savedUser?.token;
       const config = { headers: { 'Authorization': `Bearer ${token}` } };
       
-      const response = await axios.post(`http://localhost:1200/api/v1/dashboard/tickets/${ticketId}/comments`, { text }, config);
+      const response = await axios.post(`https://campus-help-desk-backend-rvws.vercel.app/api/v1/dashboard/tickets/${ticketId}/comments`, { text }, config);
       
       if (response.data.success) {
         setTickets(prevTickets => prevTickets.map(ticket => {
@@ -54,7 +54,7 @@ const MyTickets = () => {
           }
         };
 
-        const response = await axios.get('http://localhost:1200/api/v1/dashboard/user', config);
+        const response = await axios.get('https://campus-help-desk-backend-rvws.vercel.app/api/v1/dashboard/user', config);
         
         const sortedTickets = (response.data.tickets || []).sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setTickets(sortedTickets);

@@ -39,7 +39,7 @@ console.log("FORM DATA IN REACT:", formData);
    
   toast.promise(
     
-    axios.post('http://localhost:1200/api/v1/dashboard/create', {
+    axios.post('https://campus-help-desk-backend-rvws.vercel.app/api/v1/dashboard/create', {
         title: formData.title,
         category: formData.category,
         description: formData.description

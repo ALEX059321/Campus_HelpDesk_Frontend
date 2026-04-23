@@ -25,10 +25,10 @@ const AdminDashboard = () => {
     try {
       const config = fetchConfig();
       const [ticketsRes, usersRes, suggestionsRes, reportsRes] = await Promise.allSettled([
-        axios.get('http://localhost:1200/api/v1/admin/dashboard/all-tickets', config),
-        axios.get('http://localhost:1200/api/v1/admin/dashboard/all-users', config),
-        axios.get('http://localhost:1200/api/v1/admin/dashboard/all-suggestions', config),
-        axios.get('http://localhost:1200/api/v1/admin/dashboard/all-reports', config)
+        axios.get('https://campus-help-desk-backend-rvws.vercel.app/api/v1/admin/dashboard/all-tickets', config),
+        axios.get('https://campus-help-desk-backend-rvws.vercel.app/api/v1/admin/dashboard/all-users', config),
+        axios.get('https://campus-help-desk-backend-rvws.vercel.app/api/v1/admin/dashboard/all-suggestions', config),
+        axios.get('https://campus-help-desk-backend-rvws.vercel.app/api/v1/admin/dashboard/all-reports', config)
       ]);
 
       if (ticketsRes.status === 'fulfilled') setTickets(ticketsRes.value.data.tickets || []);
@@ -51,7 +51,7 @@ const AdminDashboard = () => {
   const handleDeleteTicket = async (ticketId) => {
     if (!window.confirm("Are you sure you want to delete this ticket?")) return;
     try {
-      await axios.delete(`http://localhost:1200/api/v1/admin/dashboard/delete/${ticketId}`, fetchConfig());
+      await axios.delete(`https://campus-help-desk-backend-rvws.vercel.app/api/v1/admin/dashboard/delete/${ticketId}`, fetchConfig());
       toast.success("Ticket deleted successfully");
       setTickets(tickets.filter(t => t._id !== ticketId));
     } catch (err) {
@@ -62,7 +62,7 @@ const AdminDashboard = () => {
   const handleDeleteUser = async (userId) => {
     if (!window.confirm("Are you sure you want to delete this user? This action cannot be undone.")) return;
     try {
-      await axios.delete(`http://localhost:1200/api/v1/admin/dashboard/delete-user/${userId}`, fetchConfig());
+      await axios.delete(`https://campus-help-desk-backend-rvws.vercel.app/api/v1/admin/dashboard/delete-user/${userId}`, fetchConfig());
       toast.success("User deleted successfully");
       setUsers(users.filter(u => u._id !== userId));
     } catch (err) {
@@ -73,7 +73,7 @@ const AdminDashboard = () => {
   const handleDeleteReport = async (reportId) => {
     if (!window.confirm("Are you sure you want to delete this incident report? This action cannot be undone.")) return;
     try {
-      await axios.delete(`http://localhost:1200/api/v1/admin/dashboard/delete-report/${reportId}`, fetchConfig());
+      await axios.delete(`https://campus-help-desk-backend-rvws.vercel.app/api/v1/admin/dashboard/delete-report/${reportId}`, fetchConfig());
       toast.success("Report deleted successfully");
       setReports(reports.filter(r => r._id !== reportId));
     } catch (err) {
@@ -83,7 +83,7 @@ const AdminDashboard = () => {
 
   const handleUpdateStatus = async (ticketId, status) => {
     try {
-      await axios.patch(`http://localhost:1200/api/v1/admin/dashboard/${ticketId}/status`, { status }, fetchConfig());
+      await axios.patch(`https://campus-help-desk-backend-rvws.vercel.app/api/v1/admin/dashboard/${ticketId}/status`, { status }, fetchConfig());
       toast.success(`Status updated to ${status}`);
       setTickets(tickets.map(t => t._id === ticketId ? { ...t, status } : t));
     } catch (err) {

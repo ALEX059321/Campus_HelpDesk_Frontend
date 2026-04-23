@@ -37,7 +37,7 @@ const ReportIncident = () => {
     };
 
     toast.promise(
-      axios.post('http://localhost:1200/api/v1/dashboard/reports/create', formData, config), 
+      axios.post('https://campus-help-desk-backend-rvws.vercel.app/api/v1/dashboard/reports/create', formData, config), 
       {
         loading: 'Submitting Confidential Report...',
         success: (res) => {

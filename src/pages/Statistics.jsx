@@ -13,7 +13,7 @@ const Statistics = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await axios.get('http://localhost:1200/api/v1/public/statistics');
+        const res = await axios.get('https://campus-help-desk-backend-rvws.vercel.app/api/v1/public/statistics');
         
         if (res.data.success) {
           setTickets(res.data.tickets || []);

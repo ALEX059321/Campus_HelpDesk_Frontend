@@ -18,7 +18,7 @@ const AdminRegister = () => {
     const data = { name, email, password };
 
     toast.promise(
-      axios.post('http://localhost:1200/api/v1/auth/admin/register', data),
+      axios.post('https://campus-help-desk-backend-rvws.vercel.app/api/v1/auth/admin/register', data),
       {
         loading: 'Registering new administrator...',
         success: (res) => {
